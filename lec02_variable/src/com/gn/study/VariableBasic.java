@@ -66,5 +66,33 @@ public class VariableBasic {
 		System.out.print(word.charAt(3));
 		System.out.print(word.charAt(4));
 		System.out.print("\n");
+		
+		// 업캐스팅 - 할당
+		int a = 23;
+		double b = a;
+		System.out.println(b); //23.0 :: double 으로 업캐스팅
+		
+		// 업캐스팅 - 연산
+		int c = 23;
+		double d = 13.1;
+		System.out.println(c+d); // 36.1 :: double 으로 업캐스팅
+	
+		// 업캐스팅 - char 할당
+		char test = 'a';
+		int test_num = test;
+		System.out.println(test_num); // 97
+		// 업캐스팅 - char 연산
+		char ch1 = 'a';
+		char ch2 = 'b';
+		System.out.println(ch1+ch2); // 195 :: 97 + 98
+		
+		System.out.println('2'-'0'); // 2
+		System.out.println((char)('f'-32)); // F
+		
+		// 다운캐스팅
+		double d_num = 13.4;
+		int i_num = 4;
+		
+		System.out.println((int)d_num+i_num); // 17 :: 0.4가 손실됨.
 	}
 }
