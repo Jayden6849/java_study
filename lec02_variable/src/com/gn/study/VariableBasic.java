@@ -24,5 +24,47 @@ public class VariableBasic {
 		score = 95;
 		System.out.println("2 : " + score);
 		
+		// 문자열 변수의 초기화
+		String str1 = "감사";
+		String str2 = new String("합니다");
+		System.out.println(str1 + str2);
+		
+		char[] chArr1 = str1.toCharArray();
+		for (char ch : chArr1) {
+			System.out.print(ch);
+		}
+		char[] chArr2 = str2.toCharArray();
+		for (char ch : chArr2) {
+			System.out.print(ch);
+		}
+		System.out.println();
+		
+		// 기본형과 문자열 비교 :: 문자열을 비교할 때는 무조건 equals 사용한다고 외우면 됨.
+		String text1 = "Apple";
+		String text2 = new String("Apple");
+		
+		boolean isEqual = (text1 == text2);
+		System.out.println(isEqual); // false : 객체가 다르기 때문에 다르다고 나옴 - 주소값이 다름
+		
+		System.out.println(text1.equals(text2)); // true 내용이 같으므로 같다고 나옴
+		System.out.println(text1.compareTo(text2)); // 0 내용이 같으므로 같다고 나옴
+		
+		String text3 = "Apple";
+		System.out.println(text1 == text3); // true : 다른 언어와 같이 사용할 때 문제가 생기기 때문에 피해야함.
+		
+		/* 
+		 * 프론트단에서 데이터를 그대로 가져오게 되면 String str = new String("ABC"); 의 형태를 띔
+		 */
+		
+		// charAt()의 활용한 문자 추출	
+		String word = "Hello";
+		char first = word.charAt(0);
+		System.out.print(first);
+		char second = word.charAt(1);
+		System.out.print(second);
+		System.out.print(word.charAt(2));
+		System.out.print(word.charAt(3));
+		System.out.print(word.charAt(4));
+		System.out.print("\n");
 	}
 }
