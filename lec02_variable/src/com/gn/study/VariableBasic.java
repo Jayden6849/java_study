@@ -88,11 +88,18 @@ public class VariableBasic {
 		
 		System.out.println('2'-'0'); // 2
 		System.out.println((char)('f'-32)); // F
+		System.out.println((char)('F'+32)); // f
 		
 		// 다운캐스팅
 		double d_num = 13.4;
 		int i_num = 4;
 		
 		System.out.println((int)d_num+i_num); // 17 :: 0.4가 손실됨.
+		
+		// 상수
+		final double PI = 3.141592; // 선언을 하면서 동시에 초기화! (반드시)
+		double r = 2;
+		System.out.printf("%.2f", r*r*PI);
+		
 	}
 }
