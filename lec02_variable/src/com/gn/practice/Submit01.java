@@ -10,7 +10,7 @@ public class Submit01 {
 		a = scan.nextInt();
 		b = scan.nextInt();
 		
-		System.out.println(a+", "+b);
+		System.out.println(a+","+b);
 		
 		scan.close();
 	}
