@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Submit03 {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
-		int x = scan.nextInt();
-		int y = scan.nextInt();
+		int pieces = sc.nextInt();
+		int boxes;
 		
-		int z = ++x + y++; 
+		boxes = (pieces%10 != 0) ? (pieces/10 + 1) : pieces/10;
 		
-		System.out.println(z);
+		System.out.println(boxes);
 		
-		scan.close();
+		sc.close();
 	}
 }
