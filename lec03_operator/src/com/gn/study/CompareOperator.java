@@ -30,6 +30,10 @@ public class CompareOperator {
 		char c2 = 'A';
 		System.out.println((int)c1+" < "+(int)c2+" :: "+(c1 < c2)); // false :: a = 97, A = 65
 		
-
+		// 4. equals()
+		String str1 = "apple";
+		String str3 = new String("apple");
+		boolean bool = str1.equals(str3);
+		System.out.println(bool); // true	
 	}
 }
