@@ -40,8 +40,24 @@ public class ConditionStmt {
 			System.out.print("3 미만");
 		}
 				
-		System.out.println("입니다.");		
+		System.out.println("입니다.");
 		
+		// 중첩 if문
+		// 변수의 값이 양수인지 음수인지 판단을 한 후 양수라면 짝수인지 홀수인지 판단하는 메커니즘
+		int target = -5;
+		
+		if (target > 0) {
+			if (target%2 == 0) {
+				System.out.println("짝수입니다.");
+			} else {
+				System.out.println("홀수입니다.");
+			}
+		} else if (target < 0) {
+			System.out.println("음수입니다.");
+		} else {
+			System.out.println("0입니다.");
+		}
+
 		sc.close();
 	}
 }
