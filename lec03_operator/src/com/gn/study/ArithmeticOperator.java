@@ -54,8 +54,5 @@ public class ArithmeticOperator {
 		System.out.println(post); // 5
 		System.out.println(post++); // 5 :: 출력된 후 더해짐 (다음 라인에서 연산)
 		System.out.println(post); // 6
-		
-		
-		
 	}
 }
