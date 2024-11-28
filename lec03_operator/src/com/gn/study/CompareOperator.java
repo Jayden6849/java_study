@@ -25,6 +25,10 @@ public class CompareOperator {
 		boolean smallSame = (num1 <= num2);
 		System.out.println(smallSame);
 		
+		// 3. char 와 비교연산자
+		char c1 = 'a';
+		char c2 = 'A';
+		System.out.println((int)c1+" < "+(int)c2+" :: "+(c1 < c2)); // false :: a = 97, A = 65
 		
 
 	}
