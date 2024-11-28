@@ -1,6 +1,5 @@
 package com.gn.study;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConditionStmt {
