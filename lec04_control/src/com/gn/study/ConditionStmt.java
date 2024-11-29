@@ -94,6 +94,23 @@ public class ConditionStmt {
 			System.out.println("올바르게 입력되지 않았습니다.");
 		}
 		
+		// 조건이 여러개가 수행하는 기능이 같은 경우
+		int month = 7;
+		
+		switch(month) {
+		case 1, 3, 5, 7, 8, 10, 12:
+			System.out.println("31일까지 있습니다.");
+			break;
+		case 4: case 6: case 9: case 11:
+			System.out.println("30일까지 있습니다.");
+			break;
+		case 2:
+			System.out.println("28일까지 있습니다.");
+			break;
+		default:
+			System.out.println("몇 월인지 올바르게 입력되지 않았습니다.");	
+		}
+		
 		sc.close();
 	}
 }
