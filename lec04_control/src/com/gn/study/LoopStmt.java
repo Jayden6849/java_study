@@ -21,5 +21,16 @@ public class LoopStmt {
 			
 			if(i>100) break;
 		}		
+		
+		// 중첩 for
+		// int a 는 1-2까지 하나씩 커지면서 반복
+		// int b 는 1-3까지 하나직 커지면서 반복
+		for (int a=1; a<=2; a++) {
+			System.out.println("A"+a);
+			for(int b=1; b<=3; b++) {
+				System.out.println("B"+b);
+			}
+			System.out.println("C");
+		}
 	}
 }
