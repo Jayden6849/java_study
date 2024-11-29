@@ -58,6 +58,42 @@ public class ConditionStmt {
 			System.out.println("0입니다.");
 		}
 
+		// switch문
+		int day = 2; // 관례상 0(일요일) - 6(토요일) :: flag - 많이 쓰이는 특정한 약속들
+		String text = "";
+		
+		switch(day) {
+		case 0:
+			text = "일";
+			break;
+		case 1:
+			text = "월";
+			break;
+		case 2:
+			text = "화";
+			break;
+		case 3:
+			text = "수";
+			break;
+		case 4:
+			text = "목";
+			break;
+		case 5:
+			text = "금";
+			break;
+		case 6:
+			text = "토";
+			break;
+		default:
+			text = "Error(-1)";
+		}		
+		
+		if(0<=day && day<=6) {
+			System.out.println("오늘은 " + text + "요일입니다.");
+		} else {
+			System.out.println("올바르게 입력되지 않았습니다.");
+		}
+		
 		sc.close();
 	}
 }
