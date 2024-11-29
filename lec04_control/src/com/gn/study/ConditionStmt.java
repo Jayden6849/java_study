@@ -42,6 +42,8 @@ public class ConditionStmt {
 				
 		System.out.println("입니다.");
 		
+		sc.close();
+		
 		// 중첩 if문
 		// 변수의 값이 양수인지 음수인지 판단을 한 후 양수라면 짝수인지 홀수인지 판단하는 메커니즘
 		int target = -5;
@@ -110,7 +112,5 @@ public class ConditionStmt {
 		default:
 			System.out.println("몇 월인지 올바르게 입력되지 않았습니다.");	
 		}
-		
-		sc.close();
 	}
 }

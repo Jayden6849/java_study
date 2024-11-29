@@ -3,6 +3,8 @@ package com.gn.homework.test;
 import java.util.Scanner;
 
 public class Practice {
+	// Constructor
+	Practice() {}
 	// Method
 	// 1. 인사말을 출력하는 기능(메소드)
 	public void greet() {
@@ -16,7 +18,7 @@ public class Practice {
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 		
-		System.out.println(num1+num2);
+		System.out.println("입력한 두 정수의 합 = " + (num1+num2));
 		
 		sc.close();
 	}
