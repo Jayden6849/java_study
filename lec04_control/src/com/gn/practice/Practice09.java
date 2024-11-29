@@ -2,14 +2,13 @@ package com.gn.practice;
 
 public class Practice09 {
 	public static void main(String[] args) {
-		// 구구단	
-		external:
-		for(int i=2; i<=9; i++) {
-			System.out.println("==="+i+"단===");
-			for(int j=1; j<=9; j++) {
-				System.out.println(i+" * "+j+" = "+(i*j));
-				if(i*j == 27) break external;
-			}
+		int count = 0;
+		while(true)
+		{
+			System.out.println("반복 횟수: " + (count+1));
+			count++;
+			if(count > 4) break;
 		}
+		System.out.println("반복 종료!");
 	}
 }

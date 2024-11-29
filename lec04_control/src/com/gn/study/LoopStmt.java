@@ -54,5 +54,17 @@ public class LoopStmt {
 		}
 		System.out.print(4);
 		System.out.println();
+		
+		// while문
+		int count = 1;
+//		while(count <= 10) {
+//			System.out.println(count);
+//			count++;
+//		}
+		while(true) {
+			System.out.println(count);
+			count++;
+			if(count > 10) break;
+		}
 	}
 }
