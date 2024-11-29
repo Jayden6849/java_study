@@ -32,5 +32,13 @@ public class LoopStmt {
 			}
 			System.out.println("C");
 		}
+		
+		// Nested For 활용
+		for(int x=0; x<2; x++) {
+			for(int y=0; y<4; y++) {
+				System.out.print("*");
+			}
+			System.out.print("\n");
+		}
 	}
 }
