@@ -17,6 +17,7 @@ public class Practice {
 				System.out.println("9 이하의 숫자만 입력해주세요.");
 				continue;
 			} else if(input == 0) {
+				sc.close();
 				break;
 			} else {
 				for(int i=input; i<=9; i++) {
@@ -32,12 +33,13 @@ public class Practice {
 	public void practice03() {
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
+		for(;;) {
 			System.out.print("입력 : ");
 			String input = sc.nextLine();
 			
 			if("탈출".equals(input)) {
 				System.out.println("프로그램 종료");
+				sc.close();
 				break;
 			} else {
 				System.out.println(input);
@@ -46,7 +48,20 @@ public class Practice {
 	}
 	
 	public void practice06() {
-
+		String tree = "";
+		
+		for(int i=1; i<=5; i++) {
+			for(int j=1; j<=(5-i); j++) {
+				tree += " ";
+			}
+			for(int j=1; j<=(i*2-1); j++) {
+				tree += "*";
+				if(j==i*2-1) {
+					tree += "\n";
+				}
+			}
+		}
+		System.out.println(tree);
 	}
 	
 	public void practice07() {
@@ -63,5 +78,7 @@ public class Practice {
 				else System.out.print("수");
 			}
 		}
+		
+		sc.close();
 	}
 }
