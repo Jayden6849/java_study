@@ -28,10 +28,9 @@ public class Run {
 			p.practice03();
 			break;
 		case 5:
+			p.practice05();
 			break;
 		}
-		
-		
 		
 		sc.close();
 	}

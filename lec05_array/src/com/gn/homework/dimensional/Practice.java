@@ -81,4 +81,47 @@ public class Practice {
 				System.out.print(i+1 +", ");
 		}
 	}
+	
+	public void practice05() {
+		Scanner sc = new Scanner(System.in);
+		
+		String[] choices = {"가위", "바위", "보"};
+		
+		int cnt = 0;
+		int win = 0;
+		int draw = 0;
+		int lose = 0;
+		
+		do {
+			System.out.print("가위바위보 : ");
+			String input = sc.next();
+			
+			int random = (int)(Math.random()*3);
+			String computer = choices[random];
+			
+			if("stop".equalsIgnoreCase(input)) {
+				System.out.println(cnt + "전 " + win + "승 " + draw + "무 " + lose + "패");
+				sc.close();
+				break;
+			} else if(!("바위".equals(input) || "가위".equals(input) || "보".equals(input))) {
+				System.out.println("잘못 입력하셨습니다.\n");
+				continue;
+			}
+			cnt++;
+			
+			System.out.println("컴퓨터 : " + computer);
+			System.out.println("사용자 : " + input);
+			if(computer.equals(input)) {
+				System.out.println("비겼습니다");
+				draw++;
+			} else if(("보".equals(computer) && "가위".equals(input)) || ("가위".equals(computer) && "바위".equals(input)) || ("바위".equals(computer) && "가위".equals(input))) {
+				System.out.println("이겼습니다 !");
+				win++;
+			} else {
+				System.out.println("졌습니다 ㅠㅠ");
+				lose++;
+			}
+			System.out.println();
+		} while(true);
+	}
 }
