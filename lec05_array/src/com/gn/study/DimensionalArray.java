@@ -130,5 +130,16 @@ public class DimensionalArray {
 		System.out.printf("합계 = %d점\n", sum);
 		System.out.printf("평균 = %.1f점\n", average);
 		
+		// 배열의 활용 :: 최대값과 최소값
+		int[] iArr = {8, 9, 10, 4, 2};
+		
+		int max = iArr[0];
+		int min = iArr[0];
+		
+		for(int i=0; i<iArr.length; i++) {
+			if(max < iArr[i]) max = iArr[i];
+			if(min > iArr[i]) min = iArr[i];
+		}
+		System.out.println("최대값 : " + max + ", 최소값 : " + min);
 	}
 }
