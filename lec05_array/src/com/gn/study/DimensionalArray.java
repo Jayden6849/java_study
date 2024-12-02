@@ -59,6 +59,18 @@ public class DimensionalArray {
 		score = new int[4]; // 생성 :: Heap 에 객체를 마련함
 		score[0] = 90; // 초기화 :: Heap 에 생성된 배열의 원하는 인덱스에 원하는 값을 대입함
 		
+		// 7. 배열의 출력
+		// (1) 인덱스를 이용한 출력
+		System.out.println("\n===== 인덱스를 이용한 출력 =====");
+		System.out.println("age1[1] = " + age1[1]);
+		
+		// (2) 반복문을 이용한 출력 :: 배열이다? 인덱스를 기준으로 규칙을 지니게 됨
+		String[] fruits = {"딸기", "체리", "포도"};
+		
+		for(int i=0; i<fruits.length; i++) {
+			System.out.println("fruits[" + i + "] = " + fruits[i]);
+		}
+				
 		System.out.println("\n===== 배열 출력 테스트 =====");
 		System.out.println("intArr = " + Arrays.toString(intArr));
 		System.out.println("StrArr = " + Arrays.toString(strArr));

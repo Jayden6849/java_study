@@ -16,6 +16,11 @@ public class Practice01 {
 				"박지영", "김태우", "이지훈", "최유진", "정승호"
 		};
 		
+		for(int i=0; i<friends.length; i++) {
+			if(i%2!=0) continue;
+			System.out.println((i+1) + " : " + friends[i]);
+		}
+		
 		System.out.println(Arrays.toString(friends));
 	}
 }
