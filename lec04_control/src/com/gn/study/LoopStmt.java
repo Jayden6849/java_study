@@ -66,5 +66,19 @@ public class LoopStmt {
 			count++;
 			if(count > 10) break;
 		}
+		
+		// do {} while();
+		int cnt1 = 10;
+	
+		while(0 < cnt1 && cnt1 < 10) {
+			System.out.println("while문 출력");
+			cnt1--;
+		}
+		
+		cnt1 = 10;
+		do {
+			System.out.println("do-while문 출력");
+			cnt1--;
+		} while(0 < cnt1 && cnt1 < 10);
 	}
 }
