@@ -46,8 +46,18 @@ public class DimensionalArray {
 			age2[i] = i+10;
 		}
 		
+		// 가능
+		int[] age3 = new int[] {1, 2, 3, 4};
+		int[] age4 = {5, 6, 7};
 		
+		// 불가능 :: 주의 - 배열이 데이터를 저장하는 과정떄문에 불가능함 - 이 경우 배열의 생성 절차가 생략되어 문제가 발생함
+//		int[] element;
+//		element = {9, 10, 11};
 		
+		// 6. 배열의 저장과정
+		int[] score; // 선언 :: Stack 에 배열 score 주소값이 생성됨 = score 라는 저장공간이 마련
+		score = new int[4]; // 생성 :: Heap 에 객체를 마련함
+		score[0] = 90; // 초기화 :: Heap 에 생성된 배열의 원하는 인덱스에 원하는 값을 대입함
 		
 		System.out.println("\n===== 배열 출력 테스트 =====");
 		System.out.println("intArr = " + Arrays.toString(intArr));
@@ -55,6 +65,10 @@ public class DimensionalArray {
 		System.out.println("heights = " + Arrays.toString(heights));
 		System.out.println("age1 = " + Arrays.toString(age1));
 		System.out.println("age2 = " + Arrays.toString(age2));
+		
+		System.out.println("age3 = " + Arrays.toString(age3));
+		System.out.println("age4 = " + Arrays.toString(age4));
+		System.out.println("score = " + Arrays.toString(score));
 		
 	}
 }
