@@ -80,5 +80,13 @@ public class LoopStmt {
 			System.out.println("do-while문 출력");
 			cnt1--;
 		} while(0 < cnt1 && cnt1 < 10);
+		
+		// continue
+		for(int i = 1; i<=10; i++) {
+			if(i%2 ==0) {
+				continue;
+			}
+			System.out.println(i);
+		}
 	}
 }
