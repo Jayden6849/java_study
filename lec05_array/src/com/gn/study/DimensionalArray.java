@@ -70,7 +70,39 @@ public class DimensionalArray {
 		for(int i=0; i<fruits.length; i++) {
 			System.out.println("fruits[" + i + "] = " + fruits[i]);
 		}
-				
+		
+		// 8. toCharArray()
+		String text = "Hello world";
+		char[] chArr = text.toCharArray();
+		
+		for(int i=0; i<chArr.length; i++) {
+			System.out.print(chArr[i]);
+		}
+		System.out.println();
+		
+		for (char c : chArr) {
+			System.out.print(c);
+		}
+		System.out.println();
+		
+		// toCharArray() vs charAt()
+		text = "안녕하세요";	
+		for(int i=0; i<text.length(); i++) {
+			System.out.print(text.charAt(i));
+		}
+		System.out.println();
+	
+		// for each :: enhanced for :: 향상된 for 문
+		int[] numbers = {1,2,3,4,5};
+		
+		for(int i=0; i<numbers.length; i++) {
+			System.out.println("numbers[" + i + "] = " + numbers[i]);
+		}
+		
+		for(int nums : numbers) {
+			System.out.println(nums);
+		}
+		
 		System.out.println("\n===== 배열 출력 테스트 =====");
 		System.out.println("intArr = " + Arrays.toString(intArr));
 		System.out.println("StrArr = " + Arrays.toString(strArr));
@@ -81,6 +113,5 @@ public class DimensionalArray {
 		System.out.println("age3 = " + Arrays.toString(age3));
 		System.out.println("age4 = " + Arrays.toString(age4));
 		System.out.println("score = " + Arrays.toString(score));
-		
 	}
 }
