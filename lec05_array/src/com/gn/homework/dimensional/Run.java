@@ -25,6 +25,7 @@ public class Run {
 			p.practice02();
 			break;
 		case 3:
+			p.practice03();
 			break;
 		case 5:
 			break;
