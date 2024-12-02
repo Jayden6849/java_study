@@ -113,5 +113,22 @@ public class DimensionalArray {
 		System.out.println("age3 = " + Arrays.toString(age3));
 		System.out.println("age4 = " + Arrays.toString(age4));
 		System.out.println("score = " + Arrays.toString(score));
+		
+		// 배열의 활용 :: 총합과 평균 구하기
+		
+		int[] nums = {83, 90, 100, 100, 50};
+		
+		int sum = 0;
+		double average = 0.0;
+		
+		for(int i : nums) {
+			sum += i;
+		}
+		
+		average = sum/(double)(nums.length);
+		
+		System.out.printf("합계 = %d점\n", sum);
+		System.out.printf("평균 = %.1f점\n", average);
+		
 	}
 }
