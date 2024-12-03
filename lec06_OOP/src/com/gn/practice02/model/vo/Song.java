@@ -15,5 +15,4 @@ public class Song {
 	public static String getAlbumName() {
 		return ALBUM_NAME;
 	}
-
 }
