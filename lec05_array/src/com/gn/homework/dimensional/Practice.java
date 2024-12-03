@@ -1,5 +1,6 @@
 package com.gn.homework.dimensional;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice {
@@ -82,6 +83,48 @@ public class Practice {
 		}
 	}
 	
+	public void practice04() {
+		int[] num = new int[45];
+		
+		for(int i=0; i<num.length; i++) {
+			num[i] = i+1;
+		}
+		
+		int tmp;
+		
+		for(int i=0; i<num.length; i++) {
+			int rnd = (int)((Math.random()*45)); // 0~44를 추출해서 바꾸자
+			
+			tmp = num[i];
+			num[i] = num[rnd];
+			num[rnd] = tmp;
+		}
+
+		int[] lotto = new int[6];
+		
+		for(int i=0; i<lotto.length; i++) {
+			lotto[i] = num[i];
+		}
+		
+		for(int i=0; i<lotto.length-1; i++) {
+			for(int j=i; j<lotto.length; j++) {
+				if(lotto[i] > lotto[j]) {
+					tmp = lotto[i];
+					lotto[i] = lotto[j];
+					lotto[j] = tmp;
+				}
+			}
+		}
+		
+		for(int i=0; i<lotto.length; i++) {
+			if(i == lotto.length-1) {
+				System.out.print(lotto[i]);
+			} else {
+				System.out.print(lotto[i] + " ");
+			}
+		}
+	}
+	
 	public void practice05() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -123,5 +166,93 @@ public class Practice {
 			}
 			System.out.println();
 		} while(true);
+	}
+	
+	public void practice06() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int n = sc.nextInt();
+		
+		String[] strArr = new String[n];
+
+		exter:
+		while(true) {
+			for(int i=0; i<strArr.length; i++) {
+				System.out.print((i+1) + "번째 문자열 : ");
+				strArr[i] = sc.nextLine();
+			}
+			
+			System.out.println(Arrays.toString(strArr));
+			
+			inner:
+			while(true) {
+				System.out.println("더 값을 입력하시겠습니까?(Y/N) : ");
+				String answer = sc.next();
+				
+				if(!("Y".equalsIgnoreCase(answer) || "N".equalsIgnoreCase(answer))) {
+					System.out.println("입력할 수 없는 값입니다");
+					continue inner;
+				} else if("Y".equalsIgnoreCase(answer)) {
+					
+					
+				} else if("N".equalsIgnoreCase(answer)) {
+					for(int i=0; i<strArr.length; i++) {
+						System.out.println(strArr[i]);
+					}
+					sc.close();
+					break exter;
+				}
+			}
+		}
+	}
+	
+	public void practice07() {
+		String[] report = {"Introduction", "Research", "Conclusion"};
+		String[] copy = new String[report.length];
+		
+		for(int i=0; i<copy.length; i++) {
+			copy[i] = report[i];
+		}
+		copy[0] = "Team Feedback";
+		
+		System.out.print("원본 보고서: ");
+		for(int i=0; i<report.length; i++) {
+			if(i==report.length-1) System.out.println(report[i]);
+			else System.out.print(report[i] + ", ");
+		}
+		
+		System.out.print("복사된 보고서: ");
+		for(int i=0; i<copy.length; i++) {
+			if(i==copy.length-1) System.out.println(copy[i]);
+			else System.out.print(copy[i] + ", ");
+		}
+	}
+	
+	public void practice08() {
+		String[] menu = {"Burger", "Pizza", "Pasta"};
+		
+		System.out.print("어제 메뉴판: ");
+		for(int i=0; i<menu.length; i++) {
+			if(i==menu.length-1) System.out.println(menu[i]);
+			else System.out.print(menu[i] + ", ");
+		}
+		
+		String[] add = {"Salad","Soup"};
+		
+		String[] today = new String[menu.length + add.length];
+		
+		for(int i=0; i<today.length; i++) {
+			if(i<menu.length)
+				today[i] = menu[i];
+			else
+				today[i] = add[i-menu.length];
+		}
+		
+		System.out.print("오늘 메뉴판: ");
+		for(int i=0; i<today.length; i++) {
+			if(i==today.length-1) System.out.println(today[i]);
+			else System.out.print(today[i] + ", ");
+		}
 	}
 }
