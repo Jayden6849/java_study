@@ -9,7 +9,9 @@ public class Practice06 {
 				arr[i][j] = "(" + i + "," + j + ")";
 				System.out.print(arr[i][j]);
 			}
-			System.out.println();
+			if(i != (arr.length-1)) System.out.println();
 		}
+		
+		System.out.println();
 	}
 }
