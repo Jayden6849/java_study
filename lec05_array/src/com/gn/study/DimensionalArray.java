@@ -205,6 +205,20 @@ public class DimensionalArray {
 		for(int i=0; i<arr4.length; i++) {
 			System.out.print(arr4[i] + ", ");
 		}
+		System.out.println();
 		
+		// Math.random()
+		double basic = Math.random();
+		System.out.println(basic);
+		
+		System.out.println((int)(basic*100+1)); // 1~100 사이의 난수
+		
+		// 예시 10~20 사이의 정수
+		int rnd = (int)(Math.random()*11+10);
+		System.out.println(rnd);
+		
+		// 예시 1~45 사이의 정수
+		int rnd2 = (int)(Math.random()*45+1);
+		System.out.println(rnd2);
 	}
 }
