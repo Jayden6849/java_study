@@ -176,5 +176,35 @@ public class DimensionalArray {
 			}
 		}
 		System.out.println(Arrays.toString(data));
+		
+		// 배열의 복사
+		System.out.println("==== 배열의 복사 ====");
+		// 1) 얕은 복사
+		int[] arr1 = {5, 6, 7, 8};
+		int[] arr2 = arr1;
+		arr2[3] = 1000;	// Heap 에 있는 데이터를 바꿔버리면 가리키고 있는 모든 주소값의 내용이 바뀌어버림 :: 거의 쓸 일이 없음
+		
+		for(int element : arr1) {
+			System.out.print(element + ", ");
+		}
+		System.out.println();
+		
+		for(int element: arr2) {
+			System.out.print(element + ", ");
+		}
+		System.out.println();
+		
+		// 2) 깊은 복사
+		int[] arr3 = {9, 10, 11, 12};
+		int[] arr4 = new int[arr3.length+4]; // 원하는 길이를 지닌 새로운 배열을 만듦
+		
+		for(int i=0; i<Math.min(arr3.length, arr4.length); i++) {
+			arr4[i] = arr3[i];
+		}
+		
+		for(int i=0; i<arr4.length; i++) {
+			System.out.print(arr4[i] + ", ");
+		}
+		
 	}
 }

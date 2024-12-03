@@ -15,7 +15,7 @@ public class Submit03 {
 			iArr[str.length()-1-i] = inputNum%10;
 			inputNum /= 10;
 		}
-				
+		
 		boolean result = true;
 		
 		for(int i=0; i<(str.length()/2); i++) {
