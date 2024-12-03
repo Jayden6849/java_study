@@ -1,6 +1,5 @@
 package com.gn.homework.dimensional;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice {
@@ -172,30 +171,41 @@ public class Practice {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("배열의 크기를 입력하세요 : ");
-		int n = sc.nextInt();
-		
-		String[] strArr = new String[n];
+		int length = sc.nextInt();
 
+		int cnt = 0;
+		String[] tmp = {};
+		
 		exter:
 		while(true) {
-			for(int i=0; i<strArr.length; i++) {
-				System.out.print((i+1) + "번째 문자열 : ");
-				strArr[i] = sc.nextLine();
+			String[] strArr = new String[length];
+			for(int i=0; i<tmp.length; i++) {
+				strArr[i] = tmp[i];
 			}
 			
-			System.out.println(Arrays.toString(strArr));
+			for(int i=cnt; i<strArr.length; i++) {
+				System.out.print(cnt++ + 1 + "번째 문자열 : ");
+				strArr[i] = sc.next();
+			}
 			
 			inner:
 			while(true) {
-				System.out.println("더 값을 입력하시겠습니까?(Y/N) : ");
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
 				String answer = sc.next();
 				
 				if(!("Y".equalsIgnoreCase(answer) || "N".equalsIgnoreCase(answer))) {
 					System.out.println("입력할 수 없는 값입니다");
 					continue inner;
 				} else if("Y".equalsIgnoreCase(answer)) {
+					System.out.print("더 입력하고 싶은 개수 : ");
+					length += sc.nextInt();
 					
+					tmp = new String[length];
+					for(int i=0; i<strArr.length; i++) {
+						tmp[i] = strArr[i];
+					}
 					
+					break inner;
 				} else if("N".equalsIgnoreCase(answer)) {
 					for(int i=0; i<strArr.length; i++) {
 						System.out.println(strArr[i]);
