@@ -13,8 +13,8 @@ public class Smartphone {
 		return battery;
 	}
 	// 3. 반환형x, 매개변수o :: 볼륨값을 입력하면 현재볼륨을 출력
-	public void setVolumn(int volume) {
-		this.setVolume(volume);
+	public void setVolume(int volume) {
+		this.volume = volume;
 		System.out.println("볼륨이 " + volume + "%으로 설정되었습니다.");
 	}
 	// 4. 반환형o, 매개변수o :: 메시지 전송
@@ -25,8 +25,5 @@ public class Smartphone {
 	// getter, setter
 	public int getVolume() {
 		return volume;
-	}
-	public void setVolume(int volume) {
-		this.volume = volume;
 	}
 }
