@@ -22,6 +22,15 @@ public class Smartphone {
 		return "메시지 \'" + msg + "\'가 전송되었습니다."; 
 	}
 	
+	public void checkWork() {
+		Hospital hospital = new Hospital();
+		
+		hospital.emergencyCall();
+		hospital.doctorCall();			// 같은 패키지이기 때문에 가능해졌음
+		hospital.staffAnnouncement();	// 같은 패키지이기 때문에 가능해졌음
+//		hospital.personalRecord();		// 클래스가 다르기 때문에 호출할 수 없음
+	}
+	
 	// getter, setter
 	public int getVolume() {
 		return volume;
