@@ -172,6 +172,7 @@ public class Practice {
 		
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int length = sc.nextInt();
+		sc.nextLine();
 
 		int cnt = 0;
 		String[] tmp = {};
@@ -185,8 +186,7 @@ public class Practice {
 			
 			for(int i=cnt; i<strArr.length; i++) {
 				System.out.print(cnt++ + 1 + "번째 문자열 : ");
-				strArr[i] = sc.next();
-				sc.nextLine();
+				strArr[i] = sc.nextLine();
 			}
 			
 			inner:
