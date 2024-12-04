@@ -186,13 +186,14 @@ public class Practice {
 			for(int i=cnt; i<strArr.length; i++) {
 				System.out.print(cnt++ + 1 + "번째 문자열 : ");
 				strArr[i] = sc.next();
+				sc.nextLine();
 			}
 			
 			inner:
 			while(true) {
 				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
-				String answer = sc.next();
-				
+				String answer = sc.nextLine();
+
 				if(!("Y".equalsIgnoreCase(answer) || "N".equalsIgnoreCase(answer))) {
 					System.out.println("입력할 수 없는 값입니다");
 					continue inner;
