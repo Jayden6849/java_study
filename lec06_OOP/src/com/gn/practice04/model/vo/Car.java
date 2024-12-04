@@ -18,6 +18,6 @@ public class Car {
 		System.out.println("속도가 " + this.speed + "km/h로 설정되었습니다.");
 	}
 	public String setDestination(String destination) {
-		return ("목적지가 설정되었습니다: " + destination);
+		return ("목적지가 설정되었습니다 : " + destination);
 	}
 }
