@@ -1,6 +1,7 @@
 package com.gn.study.constructor.controller;
 
 import com.gn.study.constructor.model.vo.Book;
+import com.gn.study.constructor.model.vo.Cake;
 import com.gn.study.constructor.model.vo.Car;
 import com.gn.study.constructor.model.vo.Student;
 
@@ -22,5 +23,10 @@ public class Run {
 			s.printInfo(students[i]);
 			s.printInfo(students[i], i);
 		}
+		
+		System.out.println("=== CAKE ===");
+		Cake cake = new Cake();
+		System.out.println(cake.getFlavor());
+		System.out.println(cake.getPrice());
 	}
 }
