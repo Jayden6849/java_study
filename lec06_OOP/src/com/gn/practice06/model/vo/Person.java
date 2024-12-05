@@ -13,18 +13,6 @@ public class Person {
 	// constructor
 	public Person() {}
 
-	// method
-	public String information() {
-		String result = "id : " + getId() + "\n"
-				+ "pwd : " + getPwd() + "\n"
-				+ "name : " + getName() + "\n"
-				+ "age : " + getAge() + "\n"
-				+ "gender : " + getGender() + "\n"
-				+ "phone : " + getPhone() + "\n"
-				+ "email : " + getEmail();
-		return result;
-	}
-	
 	// getter, setter
 	public String getId() {
 		return id;
@@ -67,5 +55,17 @@ public class Person {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	// method
+	public String information() {
+		String result = "id : " + getId() + "\n"
+				+ "pwd : " + getPwd() + "\n"
+				+ "name : " + getName() + "\n"
+				+ "age : " + getAge() + "\n"
+				+ "gender : " + getGender() + "\n"
+				+ "phone : " + getPhone() + "\n"
+				+ "email : " + getEmail();
+		return result;
 	}
 }
