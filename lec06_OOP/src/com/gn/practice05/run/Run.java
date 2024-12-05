@@ -1,4 +1,4 @@
-package com.gn.practice05.controller;
+package com.gn.practice05.run;
 
 import com.gn.practice05.model.vo.Book;
 
