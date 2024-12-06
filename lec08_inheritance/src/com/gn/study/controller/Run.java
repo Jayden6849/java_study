@@ -23,5 +23,10 @@ public class Run {
 		
 		// pc의 경우 부모의 메소드만 사용 가능함
 		System.out.println(pc.getA());
+		
+		System.out.println("===========");
+		
+		Juice j = new Juice("트로피칼", 500, "용과");
+		j.juiceInfo();
 	}
 }
