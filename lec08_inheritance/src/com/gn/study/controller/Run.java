@@ -28,5 +28,16 @@ public class Run {
 		
 		Juice j = new Juice("트로피칼", 500, "용과");
 		j.juiceInfo();
+		
+		System.out.println("===========");
+		
+		Food food = new Food();
+		food.printReaction();
+		
+		Food pizza1 = new Pizza();
+		pizza1.printReaction();
+		
+		Pizza pizza2 = new Pizza();
+		pizza2.printReaction();
 	}
 }
