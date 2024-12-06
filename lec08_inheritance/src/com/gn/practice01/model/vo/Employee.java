@@ -14,11 +14,4 @@ public class Employee {
 	public void printInfo() {
 		System.out.println("직원 이름 : " + name);
 	}
-	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 }
