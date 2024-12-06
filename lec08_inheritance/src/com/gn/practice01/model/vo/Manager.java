@@ -12,6 +12,7 @@ public class Manager extends Employee {
 	}
 	
 	public void printDepartment() {
+		super.printInfo();
 		System.out.println("담당 부서 : " + department);
 	}
 	
