@@ -8,7 +8,5 @@ public class Run {
 		
 		manager.printInfo();
 		manager.printDepartment();
-		
-		
 	}
 }
