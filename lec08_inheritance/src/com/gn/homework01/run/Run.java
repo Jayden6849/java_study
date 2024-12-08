@@ -1,4 +1,4 @@
-package com.gn.homework01.controller;
+package com.gn.homework01.run;
 
 import java.util.Scanner;
 
