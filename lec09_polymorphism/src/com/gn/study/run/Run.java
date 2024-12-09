@@ -42,5 +42,22 @@ public class Run {
 			else
 				System.out.println("다운캐스팅 실패");
 		}
+		
+		// 4. 정적바인딩과 동적바인딩
+		
+		System.out.println("===== 정적바인딩 =====");
+		
+		Planet myPlanet = new Planet();
+		myPlanet.description();
+		myPlanet.description(46);
+		
+		System.out.println("===== 동적바인딩 =====");
+		Planet planet1 = new Planet();
+		Planet planet2 = new Earth();
+		Planet planet3 = new Mars();
+		
+		planet1.material();
+		planet2.material();
+		planet3.material();
 	}
 }
