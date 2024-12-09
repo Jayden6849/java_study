@@ -59,5 +59,12 @@ public class Run {
 		planet1.material();
 		planet2.material();
 		planet3.material();
+		
+		// 5. 추상클래스와 추상메소드
+		System.out.println("====== 추상클래스 ======");
+		Animal dog = new Dog();
+		dog.sound();
+		Animal cat = new Cat();
+		cat.sound();
 	}
 }
