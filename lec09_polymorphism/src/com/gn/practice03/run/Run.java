@@ -7,9 +7,7 @@ public class Run {
 		Vehicle v1 = new Car();
 		Vehicle v2 = new Bicycle();
 		
-		if(v1 instanceof Car || v1 instanceof Bicycle)
-			v1.go();
-		if(v2 instanceof Car || v2 instanceof Bicycle)
-			v2.go();			
+		v1.go();
+		v2.go();			
 	}
 }
