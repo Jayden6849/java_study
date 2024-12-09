@@ -66,5 +66,11 @@ public class Run {
 		dog.sound();
 		Animal cat = new Cat();
 		cat.sound();
+		
+		// 6. 인터페이스
+		System.out.println("====== 인터페이스 ======");
+		Alarm alarm = new FireAlarm();
+		alarm.soundAlarm();
+		System.out.println(Alarm.MAX_VOLUME);
 	}
 }
