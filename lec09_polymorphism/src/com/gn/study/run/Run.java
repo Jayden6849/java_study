@@ -30,5 +30,17 @@ public class Run {
 		for(Beverage b : arrBev1) {
 			b.drink();
 		}
+
+		System.out.println("============");
+		
+		// 3. 클래스 다운캐스팅
+		for(Beverage b : arrBev1) {
+			if(b instanceof Coffee)
+				((Coffee) b).ice();
+			else if (b instanceof OrangeJuice)
+				((OrangeJuice) b).fresh();
+			else
+				System.out.println("다운캐스팅 실패");
+		}
 	}
 }
