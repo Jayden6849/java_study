@@ -1,5 +1,7 @@
 package com.gn.study.controller;
 
+import com.gn.study.model.vo.Calculator;
+
 public class Run {
 	public static void main(String[] args) {
 		int a = 3;
@@ -13,5 +15,28 @@ public class Run {
 			System.out.println("계산끝!!");
 		}
 		System.out.println(a+b);
+		
+		System.out.println("=== NullPointerException === ");
+		
+		String[] arr = new String[3];
+
+		try {
+			System.out.println(arr[0].length()); // 배열의 0번은 초기화가 되어있지 않아서 null - 여기에 .length() 메소드를 사용함  
+		} catch(NullPointerException npe) {
+			System.out.println("Exception :: 객체가 null 상태입니다.");
+		}
+		
+		System.out.println("=== ArrayIndexOutOfBoundsException === ");
+		
+		int[] numbers = {1, 2, 3};
+		
+		try {
+			System.out.println(numbers[3]); // 배열이 인덱스 2번까지밖에 없는데 3번에 접근하려함
+		} catch (IndexOutOfBoundsException ioe) {
+			System.out.println("배열의 길이를 초과한 인덱스를 쓰셨네요!!");
+		}
+		
+		Calculator c = new Calculator();
+		c.divide(3, 0);
 	}
 }
