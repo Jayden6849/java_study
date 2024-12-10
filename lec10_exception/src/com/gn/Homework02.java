@@ -13,6 +13,10 @@ class UnSupportedException extends Exception {
 	private static final long serialVersionUID = 1L;
 	
 	public UnSupportedException() {
-		super();
+		this("원인을 알 수 없는 오류가 발생했습니다.");
+	}
+	
+	public UnSupportedException(String msg) {
+		super(msg);
 	}
 }
