@@ -20,8 +20,7 @@ public class Run {
 		try {
 			loginManager.login(id, pwd);
 		} catch(InvalidCredentialsException ice) {
-			System.out.println("로그인이 실패하였습니다.");
-			System.out.println("잘못된 아이디와 비밀번호 입니다.");
+			System.out.println(ice.getMessage());
 		}
 		
 		sc.close();
