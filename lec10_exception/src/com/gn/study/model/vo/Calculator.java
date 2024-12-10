@@ -10,6 +10,12 @@ public class Calculator {
 			ae.printStackTrace();
 			System.out.println(ae.getMessage());
 			System.out.println(ae.toString());
+		} catch(RuntimeException re) {
+			re.printStackTrace();
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			System.out.print("finally ");
 		}
 		
 		System.out.println("try-catch checked");
