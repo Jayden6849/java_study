@@ -1,6 +1,8 @@
 package com.gn.study.controller;
 
+import com.gn.study.model.vo.Account;
 import com.gn.study.model.vo.Calculator;
+import com.gn.study.model.vo.InsufficientBalanceException;
 import com.gn.study.model.vo.User;
 
 public class Run {
@@ -54,5 +56,18 @@ public class Run {
 			System.out.println("NullPointerException 발생");
 		}
 		System.out.println("Throws checked");
+		
+		System.out.println("=== 사용자 정의 예외 === ");
+		
+		Account account = new Account("철수", 10000000);
+		
+		try {
+			account.withdraw(30000000);
+		} catch(InsufficientBalanceException ibe) {
+			ibe.printStackTrace();
+		}
+		
+		System.out.println("계좌 잔액 : " + account.getBalance() + "원");
+		
 	}
 }
