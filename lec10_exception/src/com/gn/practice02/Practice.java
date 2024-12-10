@@ -1,11 +1,12 @@
 package com.gn.practice02;
 
 public class Practice {
-	public void printStrLength(String str) {
+	public int printStrLength(String str) {
 		try {
-			System.out.println(str.length());
+			return str.length();
 		} catch(NullPointerException ne) {
 			System.out.println("NullPointerException 발생 : " + ne.getMessage());
 		}
+		return -1;
 	}
 }
