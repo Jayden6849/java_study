@@ -1,6 +1,7 @@
 package com.gn.study.controller;
 
 import com.gn.study.model.vo.Calculator;
+import com.gn.study.model.vo.User;
 
 public class Run {
 	public static void main(String[] args) {
@@ -38,5 +39,20 @@ public class Run {
 		
 		Calculator c = new Calculator();
 		c.divide(3, 0);
+		
+		System.out.println("=== throw new Excetpion(예외메시지) === ");
+		
+		User user = new User();
+		try {
+			user.checkAge(14);
+		} catch(IllegalArgumentException iae) {
+			System.out.println(iae.getMessage());
+		}
+		try {
+		user.nameLength(null); // NullPointerException
+		} catch(NullPointerException ne) {
+			System.out.println("NullPointerException 발생");
+		}
+		System.out.println("Throws checked");
 	}
 }
