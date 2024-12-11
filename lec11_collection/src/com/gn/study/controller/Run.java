@@ -1,6 +1,9 @@
 package com.gn.study.controller;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import com.gn.study.model.vo.Container;
 
 public class Run {
 	public static void main(String[] args) {
@@ -53,6 +56,19 @@ public class Run {
 		} catch(ClassCastException cce) {
 			cce.printStackTrace();
 		}
+		
+		// 5. Generic
+		System.out.println("===== 제네릭 =====");
+		
+		Container<Integer> container1 = new Container<>();
+		Container<String> container2 = new Container<>();
+		
+		container1.setItem(1);
+		container2.setItem("S");
+		
+		System.out.println(container1.getItem());
+		System.out.println(container2.getItem());
+
 		
 		// 컬렉션 프레임워크
 		Collection<Integer> collection = new ArrayList<>();
