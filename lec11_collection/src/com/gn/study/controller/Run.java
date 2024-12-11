@@ -2,6 +2,8 @@ package com.gn.study.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
 import com.gn.study.model.vo.Container;
 
@@ -69,9 +71,56 @@ public class Run {
 		System.out.println(container1.getItem());
 		System.out.println(container2.getItem());
 
+		// 6. 컬렉션 프레임워크
+		System.out.println("=== 컬렉션 프레임워크 ===");
 		
-		// 컬렉션 프레임워크
+		System.out.println("=== list.add() ===");
+		
 		Collection<Integer> collection = new ArrayList<>();
+		collection.add(3);
+	
+		List<String> list = new ArrayList<>();
+		list.add("안녕하세요");
+		System.out.println(list.get(0));
 		
+		System.out.println("=== list.get() ===");
+		
+		List<String> meal = new ArrayList<>();
+		meal.add("아침");
+		meal.add("점심");
+		meal.add("저녁");
+		
+		meal.add(0, "새벽");
+		meal.remove(2);
+		
+		System.out.println(meal);
+		
+		for(int i=0; i<meal.size(); i++) {
+			System.out.println(meal.get(i));
+		}
+		
+		for(String s : meal) {
+			System.out.println(s);
+		}
+		
+//		Iterator<String> iter = meal.iterator();
+//		
+//		while(iter.hasNext()) {
+//			
+//		}
+		
+		System.out.println("==== list.set() ====");
+		
+		List<Integer> nums = new ArrayList<>();
+		nums.add(15);
+		nums.add(10);
+		nums.add(23);
+		System.out.println(nums);
+		
+		nums.set(1, 500);
+		System.out.println(nums);
+		
+		nums.clear();
+		System.out.println(nums);
 	}
 }
