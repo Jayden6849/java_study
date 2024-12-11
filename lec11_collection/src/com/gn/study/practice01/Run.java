@@ -16,11 +16,9 @@ public class Run {
 		String num2 = sc.next();
 		sc.nextLine();
 		
-		System.out.print("합 : " );
 		try {
 			p.printSum(num1, num2);
 		} catch(NumberFormatException nfe) {
-			System.out.println();
 			System.out.println( "(* ERROR :: 숫자를 입력하셔야합니다.)");
 		}
 		
