@@ -2,6 +2,7 @@ package com.gn.study.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import com.gn.study.model.vo.Container;
@@ -102,11 +103,11 @@ public class Run {
 			System.out.println(s);
 		}
 		
-//		Iterator<String> iter = meal.iterator();
-//		
-//		while(iter.hasNext()) {
-//			
-//		}
+		Iterator<String> iter = meal.iterator();
+		
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
 		
 		System.out.println("==== list.set() ====");
 		
