@@ -2,10 +2,13 @@ package com.gn.study.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import com.gn.study.model.vo.Container;
+import com.gn.study.model.vo.Student;
 
 public class Run {
 	public static void main(String[] args) {
@@ -122,5 +125,26 @@ public class Run {
 		
 		nums.clear();
 		System.out.println(nums);
+		
+		System.out.println("==== Set ====");
+		
+		Set<String> city = new HashSet<>();
+		
+		System.out.println(city.add("서울"));
+		city.add("광명");
+		city.add("부산");
+		System.out.println(city.add("서울"));
+		
+		System.out.println(city); // 바로 출력할 수 있지만 순서는 원하는대로 구할 수 없음
+		
+		Set<Student> set1 = new HashSet<>();
+		set1.add(new Student("김철수", 30));
+		set1.add(new Student("이영희", 40));
+		set1.add(new Student("홍길동", 50));
+		set1.add(new Student("김철수", 30));
+		
+		for(Student s : set1) {
+			System.out.println(s);
+		}
 	}
 }
