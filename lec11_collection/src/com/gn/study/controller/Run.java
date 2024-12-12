@@ -146,5 +146,13 @@ public class Run {
 		for(Student s : set1) {
 			System.out.println(s);
 		}
+		
+		city.remove("서울");
+		System.out.println(city);
+		city.clear();
+		System.out.println(city);
+		
+		set1.remove(new Student("김철수", 30));
+		System.out.println(set1);
 	}
 }
