@@ -7,7 +7,7 @@ public class Food {
 	private int price;
 	
 	public Food() {
-		super();
+		this("기본 정식", 10000);
 	}
 	public Food(String name, int price) {
 		super();
@@ -21,14 +21,22 @@ public class Food {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Food other = (Food) obj;
-		return Objects.equals(name, other.name) && price == other.price;
+		boolean result = false;
+		
+		if(obj instanceof Food) {
+			Food other = (Food) obj;
+			result = this.name.equals(other.name) && this.price == other.price;
+		}
+		
+		return result;
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Food other = (Food) obj;
+//		return Objects.equals(name, other.name) && price == other.price;
 	}
 	@Override
 	public String toString() {
