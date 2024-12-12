@@ -2,8 +2,11 @@ package com.gn.study.controller;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
+import com.gn.study.model.vo.Product;
 import com.gn.study.model.vo.Student;
 
 public class SetRun {
@@ -82,5 +85,27 @@ public class SetRun {
 			if(fruits.size() != 0)
 				System.out.print(", ");
 		}
+		
+		System.out.println();
+		System.out.println("=== LinkedHashSet ===");
+		
+		Set<String> set4 = new LinkedHashSet<>();
+		
+//		set4 = new HashSet<>(); // HashSet에 넣으면 순서를 기억하지 못함
+		set4 = new TreeSet<>(); // TreeSet에 넣으면 정렬까지 해서 순서를 기억함
+		set4.add("동");
+		set4.add("서");
+		set4.add("남");
+		set4.add("북");
+		
+		System.out.println(set4);
+		
+		Set<Product> products = new TreeSet<>();
+		
+		products.add(new Product("젤리", 2000));
+		products.add(new Product("사탕", 500));
+		products.add(new Product("홍삼", 8000));
+		
+		System.out.println(products); // 정렬기준이 없기때문에 정렬할 수가 없음
 	}
 }
