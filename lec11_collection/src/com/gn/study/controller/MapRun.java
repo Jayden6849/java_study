@@ -1,6 +1,7 @@
 package com.gn.study.controller;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.gn.study.model.vo.Snack;
 
@@ -18,7 +19,17 @@ public class MapRun {
 		
 		System.out.println(flower);
 		
+		// 4. HashMap 요소 조회
+		System.out.println("===================");
+		
+		System.out.println(flower.get("Name"));
+		
+		String f_name1 = (String) flower.get("Lang");
+		System.out.println(f_name1);
+		
 		// 3. <key, 객체> 형태의 map
+		System.out.println("===================");
+		
 		Map<String, Snack> snackMap = new HashMap<>();
 		
 		snackMap.put("다이제", new Snack("초코", 1700));
@@ -26,5 +37,23 @@ public class MapRun {
 		snackMap.put("포테이토칩", new Snack("양파", 500));
 		
 		System.out.println(snackMap);
+		
+		// 5. 제네릭이 객체일 때 요소 조회
+		System.out.println("===================");
+		Snack s_name1 = snackMap.get("다이제");
+		System.out.println(s_name1);
+		
+		System.out.println(snackMap.get("새우깡"));
+		System.out.println(snackMap.get("포테이토칩"));
+		
+		System.out.println("===================");
+		Snack s1 = snackMap.get("다이제");
+		s1.setFlavor("소금");
+		s1.setCalory(1200);
+		System.out.println(s1);
+		System.out.println(snackMap);
+		
+		System.out.println("===================");		
+		
 	}
 }

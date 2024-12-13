@@ -17,5 +17,11 @@ public class Run {
 		info.put("John", new Information("123-456-7890", 4100000));
 		
 		System.out.println("변경후 : " + info);
+		
+		info.get("Emma").setPhone("111-111-1111");
+		
+		System.out.println("===== Emma의 정보 =====");
+		System.out.println("전화번호 : " + info.get("Emma").getPhone());
+		System.out.println("월급 : " + info.get("Emma").getSalary());
 	}
 }
