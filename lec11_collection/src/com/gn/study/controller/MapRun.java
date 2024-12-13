@@ -36,7 +36,7 @@ public class MapRun {
 		Map<String, Snack> snackMap = new HashMap<>();
 		
 		snackMap.put("다이제", new Snack("초코", 1700));
-		snackMap.put("새우깡", new Snack("새우", 900));
+		snackMap.put("새우깡", new Snack("매운맛", 900));
 		snackMap.put("포테이토칩", new Snack("양파", 500));
 		
 		System.out.println(snackMap);
@@ -110,6 +110,44 @@ public class MapRun {
 		while(iter6.hasNext()) {
 			Entry<String, Snack> entry = iter6.next();
 			System.out.println(entry);
+		}
+		
+		// 8. 요소의 제거
+		System.out.println("===================");
+		System.out.println(flower.size() + "개 : " + flower);
+		
+		flower.remove("Price");
+		System.out.println(flower.size() + "개 : " + flower);
+		
+		flower.clear();
+		System.out.println(flower.size() + "개 : " + flower);
+		
+		System.out.println("===================");
+		
+		// 9. 요소가 있는지 없는지 판단 :: isEmpty(), containsKey(), containsValue()
+		System.out.println(flower.isEmpty());
+		
+		flower.put("Name", "샌더소니아");
+		flower.put("Lang", "성공");
+		flower.put("Price", 40000);
+		
+		if(flower.containsKey("Price")) {
+			System.out.println("o");
+		} else {
+			System.out.println("x");
+		}
+		
+		if(flower.containsValue("샌더소니아")) {
+			System.out.println("o");
+		} else {
+			System.out.println("x");
+		}
+		
+		System.out.println("===================");
+		
+		// 10. 제네릭이 객체인 HashMap의 요소 검색
+		if(snackMap.containsValue(new Snack("매운맛", 900))) {
+			System.out.println("다 내꺼");
 		}
 	}
 }

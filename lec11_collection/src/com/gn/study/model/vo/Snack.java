@@ -1,5 +1,7 @@
 package com.gn.study.model.vo;
 
+import java.util.Objects;
+
 public class Snack {
 	// field
 	private String flavor;
@@ -28,11 +30,25 @@ public class Snack {
 	public void setCalory(int calory) {
 		this.calory = calory;
 	}
+	
+	// method
 	@Override
 	public String toString() {
 		return "맛:"+flavor+", 칼로리:"+calory+"(kcal)";
 	}
-
-	// method
-	
+	@Override
+	public int hashCode() {
+		return Objects.hash(calory, flavor);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Snack other = (Snack) obj;
+		return calory == other.calory && Objects.equals(flavor, other.flavor);
+	}
 }
