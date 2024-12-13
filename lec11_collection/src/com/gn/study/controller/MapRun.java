@@ -1,7 +1,10 @@
 package com.gn.study.controller;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import com.gn.study.model.vo.Snack;
 
@@ -53,7 +56,60 @@ public class MapRun {
 		System.out.println(s1);
 		System.out.println(snackMap);
 		
+		// 6. HashMap 요소 조회 2 - Iterator
 		System.out.println("===================");		
+		Set<String> keySet = flower.keySet();
+				
+		Iterator<String> iter1 = keySet.iterator();
+		while(iter1.hasNext()) {
+			System.out.println(iter1.next());
+		}
 		
+		System.out.println("===================");	
+		
+		Iterator<String> iter2 = flower.keySet().iterator();
+		while(iter2.hasNext()) {
+			System.out.println(flower.get(iter2.next()));
+		}
+		
+		System.out.println("===================");	
+		
+		Iterator<Entry<String, Object>> iter3 = flower.entrySet().iterator();
+		while(iter3.hasNext()) {
+			System.out.println(iter3.next());
+		}
+		
+		System.out.println("===================");
+		
+		Set<Entry<String, Object>> entrySet = flower.entrySet();
+		
+		Iterator<Entry<String,Object>> iter4 = entrySet.iterator();
+		while(iter4.hasNext()) {
+			System.out.println(iter4.next());
+		}
+		
+		System.out.println("===================");
+		
+		// 7. HashMap 요소 조회 총정리
+		// (1) keySet()으로 key, value 출력
+		Set<String> keySet1 = snackMap.keySet();
+		
+		Iterator<String> iter5 = keySet1.iterator();
+		while(iter5.hasNext()) {
+			String key = iter5.next();
+			Snack value = snackMap.get(key);
+			System.out.println(key + "=" + value);
+		
+		}
+		
+		System.out.println("===================");
+		// (2) entrySet()으로 entry 출력
+		Set<Entry<String, Snack>> entrySet1 = snackMap.entrySet();
+		
+		Iterator<Entry<String,Snack>> iter6 = entrySet1.iterator();
+		while(iter6.hasNext()) {
+			Entry<String, Snack> entry = iter6.next();
+			System.out.println(entry);
+		}
 	}
 }
