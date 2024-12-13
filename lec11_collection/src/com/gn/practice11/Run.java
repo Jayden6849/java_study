@@ -54,7 +54,7 @@ public class Run {
 		Iterator<Entry<Integer,Fruit>> iter4 = fruits.entrySet().iterator();
 		while(iter4.hasNext()) {
 			Entry<Integer, Fruit> entry = iter4.next();
-			if(entry.getKey() == 3)
+			if(entry.getValue().getName().equals("포도"))
 				System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
 	}
