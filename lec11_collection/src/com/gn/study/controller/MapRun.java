@@ -2,9 +2,11 @@ package com.gn.study.controller;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 import com.gn.study.model.vo.Snack;
 
@@ -149,5 +151,24 @@ public class MapRun {
 		if(snackMap.containsValue(new Snack("매운맛", 900))) {
 			System.out.println("다 내꺼");
 		}
+		
+		// 11. LinkedHashMap
+		System.out.println("===================");
+		
+		Map<String, Object> flowers = new LinkedHashMap<>();
+		
+		flowers.put("Price", 20000);
+		flowers.put("Lang", "고백");
+		flowers.put("Name", "튤립");
+		
+		System.out.println(flowers); // 넣은 순서대로 순서가 보장됨
+		
+		System.out.println(new HashMap<>(flowers)); // HashMap에 넣었더니 순서가 엉망임
+		
+		// 12. TreeMap
+		System.out.println("===================");
+		
+		Map<String, Object> treeFlowers = new TreeMap<>(flowers);
+		System.out.println(treeFlowers);
 	}
 }
