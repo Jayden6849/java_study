@@ -41,5 +41,41 @@ public class StringRun {
 		// 9. concat();
 		System.out.println("concat() : " + str2.concat(" world").concat("!!"));
 		System.out.println(str2); // 불변객체의 특징 -> 불변객체로 쓰지 않으려면 StringBuilder, StringBuffer
+		
+		// 10. lastIndexOf();
+		String test = "2024.12.16.12.43";
+		System.out.println(test.indexOf("12"));
+		System.out.println(test.lastIndexOf("12"));
+		
+		// 11. split();
+		String name = "김 철 수";
+		String[] nameArr = name.split(" ");
+		for(String n : nameArr) {
+			System.out.print(n);
+		}
+		System.out.println();
+		
+		// 12. replace()
+		String ide = "eclipse";
+		String ide2 = ide.replace("e", "a");
+		System.out.println(ide2);
+		
+		System.out.println(name);
+		System.out.print(name.replace(" ", "") + "\n");
+		
+		// 13. isBlank(), isEmpty()
+		String empty1 = "";
+		String empty2 = " ";
+		System.out.println("(1) \"\" isBlack? : " + empty1.isBlank());
+		System.out.println("(2) \"\" isEmpty? : " + empty1.isEmpty());
+		System.out.println("(3) \" \" isBlank? : " + empty2.isBlank());
+		System.out.println("(4) \" \" isEmpty? : " + empty2.isEmpty());
+		
+		System.out.println(empty1.length() == 0);
+		System.out.println(empty2.length() == 0);
+		
+		String empty3 = " 안 녕 하 세 요 ";
+		empty3 = empty3.trim();
+		System.out.println(empty3);
 	}
 }
