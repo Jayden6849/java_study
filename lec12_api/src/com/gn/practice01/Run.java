@@ -16,8 +16,7 @@ public class Run {
 		
 		for(int i=0; i<dst.length; i++) {
 			if(i%10 == 9) {
-				System.out.print(dst[i]);
-				System.out.println();
+				System.out.println(dst[i]);
 			} else {
 				System.out.print(dst[i] + ",");
 			}
