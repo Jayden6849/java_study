@@ -1,9 +1,9 @@
-package com.gn.practice03;
+package com.gn.homework06;
 
 import java.util.Scanner;
 
 public class Run {
-	public static void mains(String[] args) {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		String input = sc.nextLine();
