@@ -21,7 +21,7 @@ public class Run {
 		students.add("최진수");
 		students.add("황정현");
 		
-		int select = (int)(Math.random()*14);
+		int select = (int)(Math.random()*students.size());
 		
 		String presentation = students.get(select);
 		
