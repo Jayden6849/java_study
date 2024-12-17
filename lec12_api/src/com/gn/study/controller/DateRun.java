@@ -1,6 +1,8 @@
 package com.gn.study.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DateRun {
 	public static void main(String[] args) {
@@ -74,5 +76,23 @@ public class DateRun {
 		Calendar cal6 = Calendar.getInstance();
 		int last6 = cal6.getMaximum(Calendar.DAY_OF_MONTH);
 		System.out.println("이번 달 마지막 날짜는 " + last6 + "일입니다");
+		
+		// Date 써보기
+		Date d = new Date();
+		
+		System.out.println(d);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 E HH:mm:ss");
+		
+		System.out.println(sdf.format(d));
+		
+		// Calendar -> Date
+		
+		Calendar cal7 = Calendar.getInstance();
+		cal7.add(Calendar.YEAR, 1);
+		Date date = cal7.getTime();
+		SimpleDateFormat sdf2 = new SimpleDateFormat("yy-MM-dd a KK:mm");
+		System.out.println(sdf2.format(date));
+		
 	}
 }
