@@ -6,7 +6,18 @@ public class Practice {
 		
 		sb.append("!");
 		sb.insert(0, "<< ");
-		sb.delete(11, 13+1);
+
+		StringBuilder tmp = new StringBuilder(sb);
+		
+		String[] arr = tmp.toString().split(" ");
+		String target = "";
+		
+		for(int i=0; i<arr.length; i++) {
+			target = arr[arr.length/2];
+		}
+		
+		sb.delete(sb.indexOf(target), sb.indexOf(target)+target.length()+1);
+		
 		sb.reverse();		
 		
 		return sb.toString(); 
