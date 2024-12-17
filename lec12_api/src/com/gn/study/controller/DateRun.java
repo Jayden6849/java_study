@@ -69,5 +69,10 @@ public class DateRun {
 		System.out.println(diff/(1000*60) + "분");
 		System.out.println(diff/(1000*60*60) + "시간");
 		System.out.println(diff/(1000*60*60*24) + "일");
+		
+		// 최대값 구하기
+		Calendar cal6 = Calendar.getInstance();
+		int last6 = cal6.getMaximum(Calendar.DAY_OF_MONTH);
+		System.out.println("이번 달 마지막 날짜는 " + last6 + "일입니다");
 	}
 }
