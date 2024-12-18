@@ -2,6 +2,8 @@ package com.gn.study;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.UUID;
 
 public class FileRun {
 	public static void main(String[] args) {
@@ -54,8 +56,8 @@ public class FileRun {
 //		
 		// 4. 파일 생성
 		// (1) 디렉토리와 파일은 따로따로 하는 생성하는 것이 효과적
-		File dir1 = new File("C:\\parentDir\\childDir");
-		File file1 = new File("C:\\parentDir\\childDir\\example.txt");
+//		File dir1 = new File("C:\\parentDir\\childDir");
+//		File file1 = new File("C:\\parentDir\\childDir\\example.txt");
 //		
 //		try {
 //			if(!dir1.exists()) {
@@ -79,5 +81,59 @@ public class FileRun {
 //			}
 //		}
 		
+		// 6. 파일, 디렉토리 정보 확인
+		// (1) 배열 :: listFiles()
+		File testDir = new File("C:\\test\\sub");
+		File[] files = testDir.listFiles();
+		
+		for(File f : files) {
+			System.out.println(f);
+		}
+		
+		// (2) 유형 확인
+		File test = new File("C:\\test\\sub\\test1.txt");
+		if(test.exists()) {
+			if(test.isDirectory())
+				System.out.println("디렉토리");
+			else if(test.isFile())
+				System.out.println("파일");
+		} else {
+			System.out.println("존재하지 않습니다.");
+		}
+		String type = test.isDirectory() ? "디렉토리" : "파일";
+		System.out.println(type);
+		
+		// (3) 상위 디렉토리
+		System.out.println(test.getParent());
+
+		// (4) 이름 확인
+		System.out.println(test.getName());
+		
+		// (5) 전체 경로 확인
+		System.out.println(test.getPath());
+		
+		// (6) 마지막으로 수정된 날짜 정보 확인
+		System.out.println(test.lastModified());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy MM dd(E) a HH:mm:ss:SSS");
+		System.out.println(sdf.format(test.lastModified()));
+		
+		long byte1 = test.length();
+		double kbSize = byte1/1024.0;
+		System.out.println((Math.round(kbSize*Math.pow(10, 2)))/Math.pow(10, 2) + "KB");
+		
+		UUID rnd = UUID.randomUUID();
+		System.out.println(rnd);
+		
+		// 7. UUID 파일명
+		File dir = new File("C:\\test\\sub");
+		String uuid = UUID.randomUUID().toString();
+		File file = new File(dir, uuid+".dat");
+		
+		try {
+			if(!file.exists())
+				file.createNewFile();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
 	}
 }
