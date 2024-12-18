@@ -1,17 +1,83 @@
 package com.gn.study;
 
 import java.io.File;
+import java.io.IOException;
 
 public class FileRun {
 	public static void main(String[] args) {
 		// 1. 디렉토리 생성
 		// (1) 파일 객체의 선언 및 생성
-		File f1 = new File("C:\\exampleDir");
+//		File f1 = new File("C:\\exampleDir");
 		// (2) 디렉토리 생성
-		f1.mkdir();
+//		f1.mkdir();
+//		
+//		File f2 = new File("C:\\parentDir\\childDir");
+//		f2.mkdir(); // parentDir이 없기 때문에 생성이 안 됨
+//		f2.mkdirs(); // parentDir이 없기 때문에 생성이 안 됨
+//		
+		// 2. 디렉토리 삭제
+		// (1) 파일 객체의 선언 및 생성
+//		File path1 = new File("C:\\exampleDir");
+		// (2) 디렉토리 삭제
+//		path1.delete();
+//		
+//		File path2 = new File("C:\\parentDir");
+//		path2.delete(); // 하위 디렉토리를 가지고 있어서 삭제가 안 됨
+//	
+//		File path3 = new File("C:\\parentDir\\childDir");
+//		path3.delete();
+//		path2.delete(); // 이런 식으로 가장 아래있는 것부터 순차적으로 삭제
+//		
+		// 3. 디렉토리 존재여부 확인
+//		File f3 = new File("C:\\testDir");
+//		if(!f3.exists()) {
+//			if(f3.mkdirs())
+//				System.out.println("정상적으로 생성");
+//			else
+//				System.out.println("생성 실패");
+//		} else {
+//			System.out.println("이미 존재하는 경로");
+//		}
+//		if(f3.exists()) {
+//			if(f3.delete()) {
+//		 		System.out.println("정상 삭제");
+//		 	} else {
+//		 		System.out.println("삭제 실패");
+//		 	}
+//		}
+//		
+//		if(f3.exists()) {
+//			f3.delete();
+//		} else {
+//			f3.mkdirs();
+//		}
+//		
+		// 4. 파일 생성
+		// (1) 디렉토리와 파일은 따로따로 하는 생성하는 것이 효과적
+		File dir1 = new File("C:\\parentDir\\childDir");
+		File file1 = new File("C:\\parentDir\\childDir\\example.txt");
+//		
+//		try {
+//			if(!dir1.exists()) {
+//				dir1.mkdirs();
+//			}
+//			if(file1.createNewFile()) {
+//				System.out.println("파일 생성 성공");
+//			} else {
+//				System.out.println("파일 생성 실패");
+//			}
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+		// 5. 파일 삭제
+//		if(file1.exists()) {
+//			if(file1.delete()) {
+//				System.out.println("파일 삭제 완료");
+//			} else {
+//				System.out.println("파일 삭제 실패");
+//			}
+//		}
 		
-		File f2 = new File("C:\\parentDir\\childDir");
-		f2.mkdir(); // parentDir이 없기 때문에 생성이 안 됨
-		f2.mkdirs(); // parentDir이 없기 때문에 생성이 안 됨
 	}
 }
