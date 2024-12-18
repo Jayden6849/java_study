@@ -21,5 +21,8 @@ public class Run {
 		} else {
 			System.out.println("이미 존재하는 디렉토리");
 		}
+		
+		Practice p = new Practice();
+		p.deleteFile(dir1);
 	}
 }
