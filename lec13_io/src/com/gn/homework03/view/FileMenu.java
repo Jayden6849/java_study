@@ -54,13 +54,15 @@ public class FileMenu {
 			String input = sc.nextLine();
 			
 			if("ex끝it".equals(input)) {
+				sb.reverse();
+				sb.delete(0, 1);
+				sb.reverse();
 				while(true) {
 					System.out.print("저장할 파일 명을 입력해주세요(ex. myFile.txt) : ");
 					String fileName = sc.nextLine();
 					if(fc.checkName(fileName)) {
 						System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n) : ");
-						String overwrite = sc.next();
-						sc.nextLine();
+						String overwrite = sc.nextLine();
 						if("y".equalsIgnoreCase(overwrite)) {
 							fc.fileSave(fileName, sb);
 						} else if("n".equalsIgnoreCase(overwrite)) {
@@ -72,7 +74,7 @@ public class FileMenu {
 					break outer;
 				}
 			}	
-			sb.append(input);
+			sb.append(input).append("\n");
 		}
 	}
 	public void fileOpen() {
@@ -100,10 +102,13 @@ public class FileMenu {
 				String input = sc.nextLine();
 				
 				if("ex끝it".equals(input)) {
+					sb.reverse();
+					sb.delete(0, 1);
+					sb.reverse();
 					fc.fileEdit(name, sb);
 					break;
 				}	
-				sb.append(input);
+				sb.append(input).append("\n");
 			}
 		} else {
 			System.out.println("없는 파일입니다.");

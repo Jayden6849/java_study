@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -57,9 +56,9 @@ public class FileDAO {
 		
 		File f = new File(dir, file);
 		
-		try (FileOutputStream out = new FileOutputStream(f, true)) {
-			byte[] bArr = s.getBytes();
-			out.write(bArr);
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(f, true))) {
+			bw.write(s);
+			bw.newLine();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
